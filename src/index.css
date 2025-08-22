@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', 'sans-serif';
+
+  --color-bgcolor1: #1F242D;
+  --color-bgcolor2: #323946;
+
+}
+
+.bg-image-overlay {
+  position: relative;
+  background-image: url('./assets/images/background-home.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-image-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bgcolor1);
+  opacity: 0.8;
+}
+
+.bg-image-overlay > * {
+  position: relative;
+  z-index: 10;
+}
