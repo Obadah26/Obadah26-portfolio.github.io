@@ -10,14 +10,12 @@ const Home = () => {
     <>
       <section id="home" className="bg-image-overlay">
         {/* Container */}
-        <div className="container flex flex-col mx-auto items-center px-6 pb-6 gap-5 md:flex-row pt-30">
+        <div className="container flex flex-col mx-auto items-center pt-10 pb-6 gap-5 md:flex-row md:pt-30">
           <div className="px-2 space-y-6 mx-auto text-white">
             {/* Left Side */}
             <div className="space-y-3">
               {/* Texts */}
-              <h1 className="font-bold uppercase text-4xl text-center md:text-start">
-                Obadah Alsaadi
-              </h1>
+              <h1 className="font-bold uppercase text-4xl">Obadah Alsaadi</h1>
               <h2 className="font-medium text-3xl">
                 I'm a <span className="text-cyan-400">Backend</span> &
                 <span className="text-cyan-400"> Frontend Developer</span>
@@ -31,16 +29,32 @@ const Home = () => {
             </div>
             {/* Icons */}
             <ul className="flex items-center space-x-4">
-              <a href="https://www.google.com" className={iconCircleBorder}>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                className={iconCircleBorder}
+              >
                 <FaFacebookF className={iconStyle} />
               </a>
-              <a href="https://www.google.com" className={iconCircleBorder}>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                className={iconCircleBorder}
+              >
                 <FaLinkedinIn className={iconStyle} />
               </a>
-              <a href="https://www.google.com" className={iconCircleBorder}>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                className={iconCircleBorder}
+              >
                 <MdEmail className={iconStyle} />
               </a>
-              <a href="https://www.google.com" className={iconCircleBorder}>
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                className={iconCircleBorder}
+              >
                 <FaGithub className={iconStyle} />
               </a>
             </ul>

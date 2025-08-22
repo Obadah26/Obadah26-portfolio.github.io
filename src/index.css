@@ -1,23 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Montserrat', 'sans-serif';
+  --font-sans: "Montserrat", "sans-serif";
 
-  --color-bgcolor1: #1F242D;
+  --color-bgcolor1: #1f242d;
   --color-bgcolor2: #323946;
-
 }
 
 .bg-image-overlay {
   position: relative;
-  background-image: url('./assets/images/background-home.png');
+  background-image: url("./assets/images/background-home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.bg-image-overlay::before {
-  content: '';
+.bg-image-overlay-nav {
+  position: relative;
+  background-image: url("./assets/images/background-home.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.bg-image-overlay::before,
+.bg-image-overlay-nav::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
