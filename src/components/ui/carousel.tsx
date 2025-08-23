@@ -186,7 +186,7 @@ function CarouselPrevious({
       className={cn(
         "absolute size-12 md:size-8 rounded-full",
         orientation === "horizontal"
-          ? "top-1/2 left-20 translate-y-65 md:-left-15 md:-translate-y-1/2"
+          ? "top-1/2 left-20 translate-y-65 md:-left-15 md:-translate-y-1"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -216,7 +216,7 @@ function CarouselNext({
       className={cn(
         "absolute size-12 md:size-8 rounded-full",
         orientation === "horizontal"
-          ? "top-1/2 right-16 translate-y-65 md:-right-15 md:-translate-y-1/2"
+          ? "top-1/2 right-16 translate-y-65 md:-right-15 md:-translate-y-1"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}

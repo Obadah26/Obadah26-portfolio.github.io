@@ -20,11 +20,13 @@ const Home = () => {
                 I'm a <span className="text-cyan-400">Backend</span> &
                 <span className="text-cyan-400"> Frontend Developer</span>
               </h2>
-              <p className="max-w-sm">
-                I'm professional web developer with strong skill in HTML, CSS,
-                JavaScript, Tailwind, JQuery etc. I have working in this field
-                almost 3 years and all projects are complited successfully with
-                100% client satisfiction.
+              <p className="max-w-md">
+                I am a professional web developer with over three years of
+                experience. My expertise includes HTML5, CSS3, JavaScript, and
+                modern frameworks like React and TypeScript. I also build mobile
+                applications with Flutter and Dart, and have foundational
+                knowledge in Unity. My passion is delivering successful projects
+                with 100% client satisfaction.
               </p>
             </div>
             {/* Icons */}

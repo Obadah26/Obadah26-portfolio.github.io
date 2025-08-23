@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHtml5, FaReact, FaCss3Alt, FaUnity } from "react-icons/fa";
+import { FaFlutter, FaDartLang } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiJavascript, SiAdobephotoshop } from "react-icons/si";
 import Card from "../components/Card";
@@ -32,48 +33,72 @@ const Skills = () => {
       title: "HTML-5",
       color: "text-orange-600",
       titleColor: "text-orange-600",
+      levelText: "Intermediate",
+      parg: "Used to structure the content of all web pages.",
     },
     {
       icon: FaCss3Alt,
       title: "CSS-3",
       color: "text-blue-600",
       titleColor: "text-blue-600",
+      levelText: "Advanced",
+      parg: "Essential for styling and presenting web content beautifully.",
     },
     {
       icon: RiTailwindCssFill,
       title: "Tailwind CSS",
       color: "text-cyan-500",
       titleColor: "text-cyan-500",
+      levelText: "Advanced",
+      parg: "A utility-first CSS framework for building custom user interfaces.",
     },
     {
       icon: FaReact,
       title: "React",
       color: "text-sky-500",
       titleColor: "text-sky-500",
+      levelText: "Intermediate",
+      parg: "A JavaScript library for building dynamic and interactive user interfaces.",
     },
     {
       icon: SiJavascript,
       title: "JavaScript",
       color: "text-yellow-400",
       titleColor: "text-yellow-400",
+      levelText: "Advanced",
+      parg: "The core language for adding interactive behavior to websites.",
     },
     {
       icon: SiTypescript,
       title: "TypeScript",
       color: "text-blue-700",
       titleColor: "text-blue-700",
+      levelText: "Advanced",
+      parg: "A superset of JavaScript that adds static types for improved code quality.",
     },
     {
-      icon: SiAdobephotoshop,
-      title: "Adobe Photoshop",
-      color: "text-blue-800",
-      titleColor: "text-blue-800",
+      icon: FaFlutter,
+      title: "Flutter",
+      color: "text-cyan-500",
+      titleColor: "text-cyan-500",
+      levelText: "Advanced",
+      parg: "Google's UI toolkit for building natively compiled applications for any platform.",
+    },
+    {
+      icon: FaDartLang,
+      title: "Dart",
+      color: "text-indigo-600",
+      titleColor: "text-indigo-600",
+      levelText: "Advanced",
+      parg: "A client-optimized language for building fast apps on any platform.",
     },
     {
       icon: FaUnity,
       title: "Unity",
       color: "text-slate-200",
       titleColor: "text-slate-200",
+      levelText: "Beginner",
+      parg: "A powerful game engine for creating 2D, 3D, and AR/VR games.",
     },
   ];
 
@@ -89,23 +114,25 @@ const Skills = () => {
               {skills.map((skill, index) => (
                 <CarouselItem
                   key={index}
-                  className="flex justify-center items-center md:basis-1/2 lg:basis-1/3 md:pl-2"
+                  className="flex justify-center items-center md:basis-5/12 md:pl-2"
                 >
                   <Card
                     icon={skill.icon}
                     iconColor={skill.color}
-                    parg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac justo nibh. Nulla non justo porttitor, pellentesque est sit amet, tempor lorem."
+                    parg={skill.parg}
                     title={skill.title}
                     titleColor={skill.titleColor}
                     // btnColor={index === current ? "bg-cyan-300" : "bg-white"}
                     bgColor="bg-bgcolor2/20"
                     btnShow="hidden"
+                    leveltext={skill.levelText}
+                    padding={0}
                   />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            {/* <CarouselPrevious />
+            <CarouselNext /> */}
           </Carousel>
         </div>
       </section>

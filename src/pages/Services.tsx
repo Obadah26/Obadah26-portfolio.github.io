@@ -17,6 +17,8 @@ const Services = () => {
               title="App Development"
               icon={MdOutlineAppSettingsAlt}
               parg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ligula orci. Morbi non nibh sed velit tempor ornare. Curabitur ipsum erat, interdum eu erat vel, maximus tincidunt metus."
+              levelShow="hidden"
+              padding={20}
             />
             <Card
               title="Web Development"
@@ -24,11 +26,15 @@ const Services = () => {
               parg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ligula orci. Morbi non nibh sed velit tempor ornare. Curabitur ipsum erat, interdum eu erat vel, maximus tincidunt metus."
               btnColor="bg-cyan-300"
               btnText="text-white"
+              levelShow="hidden"
+              padding={20}
             />
             <Card
               title="Game Development"
               icon={FaGamepad}
               parg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a ligula orci. Morbi non nibh sed velit tempor ornare. Curabitur ipsum erat, interdum eu erat vel, maximus tincidunt metus."
+              levelShow="hidden"
+              padding={20}
             />
           </div>
         </div>
