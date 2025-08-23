@@ -2,77 +2,111 @@ import React from "react";
 import { FaHtml5, FaReact, FaCss3Alt, FaUnity } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiJavascript, SiAdobephotoshop } from "react-icons/si";
-import ProgressBar from "../components/ProgressBar";
+import Card from "../components/Card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "../components/ui/carousel";
 
 const Skills = () => {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const skills = [
+    {
+      icon: FaHtml5,
+      title: "HTML-5",
+      color: "text-orange-600",
+      titleColor: "text-orange-600",
+    },
+    {
+      icon: FaCss3Alt,
+      title: "CSS-3",
+      color: "text-blue-600",
+      titleColor: "text-blue-600",
+    },
+    {
+      icon: RiTailwindCssFill,
+      title: "Tailwind CSS",
+      color: "text-cyan-500",
+      titleColor: "text-cyan-500",
+    },
+    {
+      icon: FaReact,
+      title: "React",
+      color: "text-sky-500",
+      titleColor: "text-sky-500",
+    },
+    {
+      icon: SiJavascript,
+      title: "JavaScript",
+      color: "text-yellow-400",
+      titleColor: "text-yellow-400",
+    },
+    {
+      icon: SiTypescript,
+      title: "TypeScript",
+      color: "text-blue-700",
+      titleColor: "text-blue-700",
+    },
+    {
+      icon: SiAdobephotoshop,
+      title: "Adobe Photoshop",
+      color: "text-blue-800",
+      titleColor: "text-blue-800",
+    },
+    {
+      icon: FaUnity,
+      title: "Unity",
+      color: "text-slate-200",
+      titleColor: "text-slate-200",
+    },
+  ];
+
   return (
     <>
       <section id="skills" className="bg-bgcolor1">
-        <div className="container mx-auto px-6 text-white">
-          <h1 className="font-bold text-center pt-20 text-4xl">
+        <div className="container mx-auto py-20 text-white">
+          <h1 className="text-center text-4xl font-bold md:pb-20">
             My <span className="text-cyan-300">Skills</span>
           </h1>
-          {/* Main Row */}
-          <div className="flex flex-col justify-center space-y-5 py-10 md:space-x-50 md:flex-row md:space-y-0">
-            {/* Left Row */}
-            <div className="flex flex-row justify-center items-center space-x-5">
-              {/* Icon Column */}
-              <div className="flex flex-col space-y-5">
-                <FaHtml5 className="w-20 h-20 text-orange-700" />
-                <FaCss3Alt className="w-20 h-20 text-cyan-500" />
-                <RiTailwindCssFill className="w-20 h-20 text-cyan-400" />
-                <FaReact className="w-20 h-20 text-cyan-400" />
-              </div>
-              {/* Name & Progress Column */}
-              <div className="flex flex-col space-y-12 w-48 font-bold">
-                <div className="space-y-2">
-                  <h1>HTML-5</h1>
-                  <ProgressBar progress={80} />
-                </div>
-                <div className="space-y-2">
-                  <h1>CSS-3</h1>
-                  <ProgressBar progress={75} />
-                </div>
-                <div className="space-y-2">
-                  <h1>Tailwind CSS</h1>
-                  <ProgressBar progress={75} />
-                </div>
-                <div className="space-y-2">
-                  <h1>React</h1>
-                  <ProgressBar progress={60} />
-                </div>
-              </div>
-            </div>
-            {/* Right Row */}
-            <div className="flex flex-row justify-center items-center space-x-5">
-              {/* Icon Column */}
-              <div className="flex flex-col space-y-5">
-                <SiJavascript className="w-20 h-20 text-yellow-300" />
-                <SiTypescript className="w-20 h-20 text-cyan-400" />
-                <SiAdobephotoshop className="w-20 h-20 text-cyan-400" />
-                <FaUnity className="w-20 h-20 text-black" />
-              </div>
-              {/* Name & Progress Column */}
-              <div className="flex flex-col space-y-12 w-48 font-bold">
-                <div className="space-y-2">
-                  <h1>JavaScript</h1>
-                  <ProgressBar progress={80} />
-                </div>
-                <div className="space-y-2">
-                  <h1>TypeScript</h1>
-                  <ProgressBar progress={80} />
-                </div>
-                <div className="space-y-2">
-                  <h1>Adobe Photoshop</h1>
-                  <ProgressBar progress={50} />
-                </div>
-                <div className="space-y-2">
-                  <h1>Unity</h1>
-                  <ProgressBar progress={40} />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Carousel setApi={setApi}>
+            <CarouselContent className="max-sm:m-20 md:-ml-2">
+              {skills.map((skill, index) => (
+                <CarouselItem
+                  key={index}
+                  className="flex justify-center items-center md:basis-1/2 lg:basis-1/3 md:pl-2"
+                >
+                  <Card
+                    icon={skill.icon}
+                    iconColor={skill.color}
+                    parg="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac justo nibh. Nulla non justo porttitor, pellentesque est sit amet, tempor lorem."
+                    title={skill.title}
+                    titleColor={skill.titleColor}
+                    // btnColor={index === current ? "bg-cyan-300" : "bg-white"}
+                    bgColor="bg-bgcolor2/20"
+                    btnShow="hidden"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
     </>
