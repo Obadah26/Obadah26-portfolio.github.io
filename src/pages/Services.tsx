@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../components/Card";
 import { MdWeb, MdOutlineAppSettingsAlt } from "react-icons/md";
 import { FaGamepad } from "react-icons/fa";

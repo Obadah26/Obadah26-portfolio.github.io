@@ -1,31 +1,27 @@
-import React from "react";
 import { FaHtml5, FaReact, FaCss3Alt, FaUnity } from "react-icons/fa";
 import { FaFlutter, FaDartLang } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiJavascript, SiAdobephotoshop } from "react-icons/si";
+import { SiTypescript, SiJavascript } from "react-icons/si";
 import Card from "../components/Card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
 } from "../components/ui/carousel";
 
 const Skills = () => {
-  const [api, setApi] = React.useState<CarouselApi>();
-  const [current, setCurrent] = React.useState(0);
+  // const [api, setApi] = React.useState<CarouselApi>();
+  // const [current, setCurrent] = React.useState(0);
 
-  React.useEffect(() => {
-    if (!api) {
-      return;
-    }
+  // React.useEffect(() => {
+  //   if (!api) {
+  //     return;
+  //   }
 
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
+  //   api.on("select", () => {
+  //     setCurrent(api.selectedScrollSnap());
+  //   });
+  // }, [api]);
 
   const skills = [
     {
@@ -109,7 +105,7 @@ const Skills = () => {
           <h1 className="text-center text-4xl font-bold md:pb-20">
             My <span className="text-cyan-300">Skills</span>
           </h1>
-          <Carousel setApi={setApi}>
+          <Carousel>
             <CarouselContent className="max-sm:m-20 md:-ml-2">
               {skills.map((skill, index) => (
                 <CarouselItem
