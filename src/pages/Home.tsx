@@ -1,4 +1,4 @@
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaPhoneAlt, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import profile from "../assets/images/profile.png";
 
@@ -32,28 +32,28 @@ const Home = () => {
             {/* Icons */}
             <ul className="flex items-center space-x-4">
               <a
-                href="https://www.google.com"
+                href="tel:+966-57-083-1351"
                 target="_blank"
                 className={iconCircleBorder}
               >
-                <FaFacebookF className={iconStyle} />
+                <FaPhoneAlt className={iconStyle} />
               </a>
               <a
-                href="https://www.google.com"
+                href="https://www.linkedin.com/in/obadah-alsaadi-1b334a37b/"
                 target="_blank"
                 className={iconCircleBorder}
               >
                 <FaLinkedinIn className={iconStyle} />
               </a>
               <a
-                href="https://www.google.com"
+                href="mailto:obaaaaada@gmail.com"
                 target="_blank"
                 className={iconCircleBorder}
               >
                 <MdEmail className={iconStyle} />
               </a>
               <a
-                href="https://www.google.com"
+                href="https://github.com/Obadah26"
                 target="_blank"
                 className={iconCircleBorder}
               >

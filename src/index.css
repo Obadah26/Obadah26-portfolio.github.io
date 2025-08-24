@@ -26,8 +26,7 @@
   background-repeat: no-repeat;
 }
 
-.bg-image-overlay::before,
-.bg-image-overlay-nav::before {
+.bg-image-overlay::before {
   content: "";
   position: absolute;
   top: 0;

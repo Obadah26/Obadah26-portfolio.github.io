@@ -1,5 +1,5 @@
-import logo from "../assets/images/logo.png";
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import logo from "../assets/images/logo_saadi2.png";
+import { FaPhoneAlt, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
@@ -18,25 +18,30 @@ const Contact = () => {
           <div className="flex flex-col-reverse justify-center items-center md:space-x-20 md:flex-row">
             {/* Left Side */}
             <div className="flex flex-col space-y-10 items-center md:items-start pt-20 md:pt-0">
-              <img src={logo} alt="" />
+              <img src={logo} alt="" className="h-12 brightness-200" />
               <p className="font-medium text-[16px] max-w-md text-center px-2 md:px-0 md:text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac
-                justo nibh. Nulla non justo porttitor, pellentesque est sit
-                amet, tempor lorem. Phasellus vitae mauris bibendum, pharetra
-                metus at, volutpat augue.
+                I am a professional web developer with over three years of
+                experience. My expertise includes HTML5, CSS3, JavaScript, and
+                modern frameworks like React and TypeScript. I also build mobile
+                applications with Flutter and Dart, and have foundational
+                knowledge in Unity. My passion is delivering successful projects
+                with 100% client satisfaction.
               </p>
               {/* Icons */}
               <ul className="flex items-center space-x-10">
-                <a href="https://www.google.com" target="_blank">
-                  <FaFacebookF className={iconStyle} />
+                <a href="tel:+966-57-083-1351" target="_blank">
+                  <FaPhoneAlt className={iconStyle} />
                 </a>
-                <a href="https://www.google.com" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/obadah-alsaadi-1b334a37b/"
+                  target="_blank"
+                >
                   <FaLinkedinIn className={iconStyle} />
                 </a>
-                <a href="https://www.google.com" target="_blank">
+                <a href="mailto:obaaaaada@gmail.com" target="_blank">
                   <MdEmail className={iconStyle} />
                 </a>
-                <a href="https://www.google.com" target="_blank">
+                <a href="https://github.com/Obadah26" target="_blank">
                   <FaGithub className={iconStyle} />
                 </a>
               </ul>

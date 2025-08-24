@@ -1,12 +1,12 @@
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/logo_saadi2.png";
 
 const Navbar = () => {
   const textStyle =
-    "hidden md:block text-white hover:border-b-1 hover:text-cyan-300 px-3 py-2";
+    "hidden text-white hover:border-b-1 hover:border-cyan-300 hover:text-cyan-300 px-3 py-2 md:block";
 
   return (
     <nav className="w-full bg-image-overlay-nav">
-      <div className="container mx-auto flex justify-center md:justify-evenly items-center py-4 relative z-20">
+      <div className="container mx-auto flex justify-center items-center py-4 relative z-20 md:justify-evenly">
         <img src={logo} alt="Logo" className="h-10" />
         {/* Navigation Links */}
         <div className="flex items-center">

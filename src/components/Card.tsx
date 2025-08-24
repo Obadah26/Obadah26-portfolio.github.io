@@ -16,6 +16,8 @@ type CardProps = {
   padding: number;
 };
 
+const hireMe = () => {};
+
 const Card = ({
   btnColor = "bg-white",
   bgColor = "bg-bgcolor1",
@@ -45,12 +47,13 @@ const Card = ({
         <p className={`text-center ${pargColor} font-medium text-[14px] px-3`}>
           {parg}
         </p>
-        <button
+        <a
           type="button"
-          className={`${btnShow} rounded-3xl px-10 py-1 font-bold w-3/4 ${btnText} ${btnColor} hover:cursor-pointer hover:bg-cyan-200`}
+          className={`${btnShow} text-center rounded-3xl px-10 py-1 font-bold w-3/4 ${btnText} ${btnColor} hover:cursor-pointer hover:bg-cyan-200`}
+          href="#contact"
         >
           Hire Me
-        </button>
+        </a>
         <span
           className={`${levelShow} bg-white text-bgcolor2 text-center py-2 w-4/5 h-10 rounded-full font-semibold`}
         >
