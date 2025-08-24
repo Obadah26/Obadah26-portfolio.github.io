@@ -16,8 +16,6 @@ type CardProps = {
   padding: number;
 };
 
-const hireMe = () => {};
-
 const Card = ({
   btnColor = "bg-white",
   bgColor = "bg-bgcolor1",
